@@ -4,8 +4,21 @@ apply plugin: "jetty"
 dependencies {
    compile project(":utils")
    compile "javax.servlet:servlet-api:2.5"
+   compile "org.apache.wicket:wicket-core:6.19.0"
 }
 
 httpPort = 8080
 stopPort = 9090
 stopKey = "stopKey"
+
+sourceSets {
+    main {
+        java {
+            srcDir "src/main/java"
+        }
+        resources {
+            srcDir "src/main/resources"
+            srcDir "src/main/java"
+        }
+    }
+}
