@@ -8,16 +8,16 @@ buildscript {
 }
 
 subprojects {
-   apply plugin: "java"
-   apply plugin: "eclipse"
+    apply plugin: "java"
+    apply plugin: "eclipse"
 
-   repositories {
+    repositories {
         mavenCentral()
-   }
+    }
 
-   dependencies {
-      compile(
-         "org.springframework:spring-context:4.1.6.RELEASE",
-      )
-   }
+    dependencies {
+        compile(
+                "org.springframework:spring-context:4.1.6.RELEASE",
+        )
+    }
 }

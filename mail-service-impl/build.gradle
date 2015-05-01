@@ -1,6 +1,6 @@
 apply plugin: "java"
 
 dependencies {
-   compile project(":mail-service")
-   compile "org.subethamail:subethasmtp:3.1.7"
+    compile project(":mail-service")
+    compile "org.subethamail:subethasmtp:3.1.7"
 }
