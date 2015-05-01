@@ -12,8 +12,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
-import fi.kapsi.kosmik.devmail.mail.MailService;
-
 /**
  * The web application class also serves as spring boot starting point by using
  * spring boot's EnableAutoConfiguration annotation and providing the main
@@ -21,12 +19,9 @@ import fi.kapsi.kosmik.devmail.mail.MailService;
  */
 @Component
 @EnableAutoConfiguration
-@ComponentScan(basePackages = { "fi.kapsi.kosmik.devmail" })
+@ComponentScan(basePackages = {"fi.kapsi.kosmik.devmail"})
 public class DevMailApplication extends WebApplication {
     private final static Logger logger = LoggerFactory.getLogger(DevMailApplication.class);
-
-    @Autowired
-    private MailService mailService;
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -47,6 +42,6 @@ public class DevMailApplication extends WebApplication {
     protected void init() {
         super.init();
         getComponentInstantiationListeners().add(new SpringComponentInjector(this, applicationContext));
-        logger.info(mailService.getTestString());
+        logger.info("initialized wicket application.");
     }
 }

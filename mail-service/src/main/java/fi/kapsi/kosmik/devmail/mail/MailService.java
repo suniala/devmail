@@ -1,5 +1,5 @@
 package fi.kapsi.kosmik.devmail.mail;
 
 public interface MailService {
-    String getTestString();
+    long getMessageCount();
 }
