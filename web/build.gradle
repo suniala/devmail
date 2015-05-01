@@ -1,16 +1,26 @@
-apply plugin: "war"
-apply plugin: "jetty"
+apply plugin: 'spring-boot'
+apply plugin: 'war'
 
 dependencies {
    compile project(":utils")
    compile project(":mail-service")
    runtime project(":mail-service-impl")
-   compile "org.apache.wicket:wicket-core:6.19.0"
-}
 
-httpPort = 8080
-stopPort = 9090
-stopKey = "stopKey"
+   compile(
+	"org.springframework.boot:spring-boot-starter",
+	"org.springframework.boot:spring-boot-starter-logging",
+	"org.springframework:spring-web:4.1.6.RELEASE",
+	"org.apache.wicket:wicket-spring:6.19.0",
+    )
+                
+    providedCompile (
+        "org.springframework.boot:spring-boot-starter-tomcat",
+    )
+		
+    testCompile(
+	"org.springframework.boot:spring-boot-starter-test",
+    )
+}
 
 sourceSets {
     main {
