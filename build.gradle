@@ -1,7 +1,12 @@
 subprojects {
    apply plugin: "java"
    apply plugin: "eclipse"
+
    repositories {
       mavenCentral()
+   }
+
+   dependencies {
+      compile "org.springframework:spring-context:4.1.6.RELEASE"
    }
 }

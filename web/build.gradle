@@ -3,6 +3,8 @@ apply plugin: "jetty"
 
 dependencies {
    compile project(":utils")
+   compile project(":mail-service")
+   runtime project(":mail-service-impl")
    compile "org.apache.wicket:wicket-core:6.19.0"
 }
 

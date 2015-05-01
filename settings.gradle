@@ -1,1 +1,1 @@
-include ":utils",":web"
+include ":utils", ":mail-service", ":mail-service-impl", ":web"
