@@ -3,7 +3,6 @@ apply plugin: "jetty"
 
 dependencies {
    compile project(":utils")
-   compile "javax.servlet:servlet-api:2.5"
    compile "org.apache.wicket:wicket-core:6.19.0"
 }
 
