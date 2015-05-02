@@ -1,0 +1,20 @@
+*** Settings ***
+
+Documentation  DevMail integration tests.
+Resource       resource.txt
+
+
+*** Test Cases ***
+
+Initial Message Count
+    Open Browser To Start Page
+    Element Text Should Be      tag=p   Current message count: 0
+    [Teardown]  Close Browser
+
+Message Count Increases
+    Open Browser To Start Page
+    Element Text Should Be      tag=p   Current message count: 0
+    Send Mail
+    Go To Start Page
+    Element Text Should Be      tag=p   Current message count: 1
+    [Teardown]  Close Browser
