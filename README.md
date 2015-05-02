@@ -4,6 +4,7 @@ A simple Wicket application for practising:
 * Spring Boot
 * Gradle
 * subethasmtp
+* Robot Framework
 
 ## Usage
 Run web server from command line:
